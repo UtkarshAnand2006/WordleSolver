@@ -35,13 +35,13 @@ A _good guess_ is one that creates the **most balanced partitioning**, because b
 
 This project models that mathematically using:
 
-\[
+```math
 Entropy = -\sum p_i \log_2(p_i)
-\]
+```
 
 Where:
 
-- \(p_i\) = probability of receiving a particular response pattern
+- `pᵢ` = probability of receiving a particular response pattern
 - Higher entropy ⇒ more information gained
 - More information ⇒ faster convergence to the answer
 
@@ -94,7 +94,7 @@ This project eliminates runtime recomputation by generating a full:
 # 📦 Pattern Lookup Table
 
 ```txt
-(patterns.bin)
+patterns.bin
 ```
 
 containing:
@@ -188,15 +188,15 @@ xxxxx
 
 Then builds a probability distribution:
 
-\[
-p(pattern) = \frac{\text{count(pattern)}}{\text{remaining candidates}}
-\]
+```math
+p(pattern) = \frac{count(pattern)}{remaining\ candidates}
+```
 
 Finally:
 
-\[
+```math
 H = -\sum p \log_2 p
-\]
+```
 
 The guess with maximum entropy is selected.
 
@@ -240,7 +240,9 @@ Example:
 ```txt
 gyxgx
 ↓
-21020(base3)
+21020(5-tuple)
+↓
+(195)₃
 ```
 
 This enables:
@@ -271,7 +273,7 @@ This rapidly shrinks the search space.
 
 | Metric              | Value                 |
 | ------------------- | --------------------- |
-| Average solve depth | Very low              |
+| Average solve depth | Very low (3 to 4)     |
 | Worst-case depth    | Typically ≤ 6         |
 | Lookup complexity   | O(1)                  |
 | Solver strategy     | Information-theoretic |
