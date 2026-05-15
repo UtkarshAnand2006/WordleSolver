@@ -1,0 +1,3 @@
+C:/Users/ua280/Desktop/WordleSolver/build/CMakeFiles/wordle.dir
+C:/Users/ua280/Desktop/WordleSolver/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ua280/Desktop/WordleSolver/build/CMakeFiles/ZERO_CHECK.dir

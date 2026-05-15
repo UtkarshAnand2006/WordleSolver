@@ -1,0 +1,10 @@
+^C:\USERS\UA280\DESKTOP\WORDLESOLVER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/ua280/Desktop/WordleSolver -BC:/Users/ua280/Desktop/WordleSolver/build --check-stamp-file C:/Users/ua280/Desktop/WordleSolver/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

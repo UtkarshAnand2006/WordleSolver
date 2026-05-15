@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "echo",
+			"type": "shell",
+			"command": "echo Hello"
+		},
+		{
+			"type": "shell",
+			"label": "build",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"build",
+				"--config",
+				"Debug"
+			],
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}
